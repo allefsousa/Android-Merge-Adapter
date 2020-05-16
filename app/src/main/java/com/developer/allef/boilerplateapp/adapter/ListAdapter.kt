@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.item_card.view.*
 
 /**
  * @author allef.santos on 15/05/20
- */class CardAdapter(val feiraList: MutableList<feiraLivre> = mutableListOf()) :RecyclerView.Adapter<CardAdapter.CardAdapterViewHolder>(){
+ */class ListAdapter(val feiraList: MutableList<feiraLivre> = mutableListOf()) :RecyclerView.Adapter<ListAdapter.CardAdapterViewHolder>(){
      lateinit var context: Context
      override fun onCreateViewHolder(
          parent: ViewGroup,
@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.item_card.view.*
           context = parent.context
          return CardAdapterViewHolder(
              LayoutInflater.from(parent.context).inflate(
-                 R.layout.item_card,
+                 R.layout.item_list,
                  parent,
                  false
              )
